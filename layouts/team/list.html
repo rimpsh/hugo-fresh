@@ -1,0 +1,7 @@
+{{ define "main" }}
+    {{ partial "team/content.html" . }}
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "list/sidebar.html" . }}
+    {{ end }}
+{{ end }}
