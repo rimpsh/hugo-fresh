@@ -11,15 +11,18 @@
       <div id="status"></div>
     </div>
 
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+
     {{ block "main" . }}
+    {{ end }}
+
+    {{ if .Params.include_footer }}
+    {{ partial "footer.html" . }}
     {{ end }}
 
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>
-
-    {{ if .Site.Params.sidebar }}
-    {{ partial "sidebar.html" . }}
-    {{ end }}
 
     {{ partial "javascript.html" . }}
   </body>

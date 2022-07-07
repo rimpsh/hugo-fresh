@@ -1,8 +1,6 @@
 ---
-title: Erster
+title: Posts
 sidebar: true
 sidebarlogo: fresh-white-alt
 include_footer: true
 ---
-
-Mein toller erster Blog-Eintrag!!
