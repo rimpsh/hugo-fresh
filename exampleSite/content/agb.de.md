@@ -1,5 +1,5 @@
 ---
-title: AGB-English
+title: AGB-Deutsch
 include_footer: true
 ---
 

@@ -1,7 +1,8 @@
 baseURL: http://something-fresh.org/
+canonifyURLs: true
 languageCode: en-us
-title: Hugo Fresh Theme
 theme: hugo-fresh
+themesDir: hugo-fresh
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
 # Disables warnings
 disableKinds:
@@ -11,6 +12,22 @@ markup:
   goldmark:
     renderer:
       unsafe: true # Allows you to write raw html in your md files
+
+languages:
+  en:
+    baseURL: http://something-fresh.org/en
+    title: EN | Hugo Fresh Theme
+    languageName: English
+    languageNameShort: EN
+    languageFlag: 🇺🇸
+    weight: 1
+  de:
+    baseURL: http://something-fresh.org/de
+    title: DE | Hugo Fresh Theme
+    languageName: Deutsch
+    languageNameShort: DE
+    languageFlag: 🇩🇪
+    weight: 2
 
 params:
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
@@ -46,9 +63,9 @@ params:
   navbar:
   - title: Features
     url: /
-  - title: Pricing
+  - title: Preis
     url: /
-  - title: Dropdown
+  - title: Ausklappen
     sublinks:
     - title: Dropdown item
       url: /
@@ -56,44 +73,44 @@ params:
       url: /
     - title: Dropdown item
       url: /
-  - title: Log in
+  - title: Einloggen
     url: /
-  - title: Sign up
+  - title: Registrieren
     url: /
     button: true
   sidebar:
     # Logo (from /images/logos/___.svg)
     logo: fresh-square
     sections:
-    - title: User
+    - title: Nutzer
       icon: user
       links:
-      - text: Profile
+      - text: Profil
         url: /
       - text: Account
         url: /
-      - text: Settings
+      - text: Einstellungen
         url: /
-    - title: Messages
+    - title: Nachrichten
       icon: envelope
       links:
       - text: Inbox
         url: /
       - text: Compose
         url: /
-    - title: Images
+    - title: Bilder
       icon: image
       links:
-      - text: Library
+      - text: Bibliothek
         url: /
-      - text: Upload
+      - text: Hochladen
         url: /
-    - title: Settings
+    - title: Einstellungen
       icon: cog
       links:
-      - text: User settings
+      - text: Nutzer-Einstellungen
         url: /
-      - text: App settings
+      - text: App-Einstellungen
         url: /
   section1:
     title: Great power comes

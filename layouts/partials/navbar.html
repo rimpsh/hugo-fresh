@@ -1,5 +1,8 @@
 {{- $navbar         := .Site.Params.navbar }}
 {{- $sidebarVisible := .Site.Params.sidebar }}
+{{- $multiLingual := site.IsMultiLingual }}
+{{- $languages := site.Languages }}
+{{- $pageLang := .Page.Lang }}
 {{ if .Params.sidebar }}
 {{ $sidebarVisible = .Params.sidebar }}
 {{ end }}
@@ -77,6 +80,27 @@
             {{ .title }}
           </a>
           {{- end }}
+          {{- end }}
+          {{- if $multiLingual }}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+                {{ site.Language.Params.languageFlag }} | {{ site.Language.Params.languageNameShort }}
+            </a>
+            <div class="navbar-dropdown">
+                {{- range .Page.AllTranslations }}
+                    {{ $translation := . }}
+                    {{- range sort $languages "Weight" "asc" }}
+                        {{- if eq $translation.Lang .Lang }}
+                            {{- if ne $pageLang .Lang }}
+                                <a href="{{ $translation.Permalink | relURL }}" class="navbar-item is-secondary">
+                                    {{ .Params.languageFlag }} | {{ .LanguageName }}
+                                </a>
+                            {{- end }}
+                        {{- end }}
+                    {{- end }}
+                {{- end }}
+            </div>
+          </div>
           {{- end }}
         </div>
       </div>
