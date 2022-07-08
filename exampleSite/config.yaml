@@ -63,9 +63,9 @@ params:
   navbar:
   - title: Features
     url: /
-  - title: Preis
+  - title: Pricing
     url: /
-  - title: Ausklappen
+  - title: Dropdown
     sublinks:
     - title: Dropdown item
       url: /
@@ -73,44 +73,46 @@ params:
       url: /
     - title: Dropdown item
       url: /
-  - title: Einloggen
+  - title: Team
+    url: /team
+  - title: Log in
     url: /
-  - title: Registrieren
+  - title: Sign up
     url: /
     button: true
   sidebar:
     # Logo (from /images/logos/___.svg)
     logo: fresh-square
     sections:
-    - title: Nutzer
+    - title: User
       icon: user
       links:
-      - text: Profil
+      - text: Profile
         url: /
       - text: Account
         url: /
-      - text: Einstellungen
+      - text: Settings
         url: /
-    - title: Nachrichten
+    - title: Messages
       icon: envelope
       links:
       - text: Inbox
         url: /
       - text: Compose
         url: /
-    - title: Bilder
+    - title: Images
       icon: image
       links:
-      - text: Bibliothek
+      - text: Library
         url: /
-      - text: Hochladen
+      - text: Upload
         url: /
-    - title: Einstellungen
+    - title: Settings
       icon: cog
       links:
-      - text: Nutzer-Einstellungen
+      - text: User settings
         url: /
-      - text: App-Einstellungen
+      - text: App settings
         url: /
   section1:
     title: Great power comes

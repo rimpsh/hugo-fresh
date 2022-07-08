@@ -1,7 +1,44 @@
-{{ define "main" }}
-    {{ partial "team/content.html" . }}
+{{define "main" }}
+    <section class="section is-medium section-secondary">
+      <div class="container">
 
-    {{ if .Site.Params.sidebar }}
-    {{ partial "list/sidebar.html" . }}
-    {{ end }}
+        <div class="title-wrapper has-text-centered">
+          <h2 class="title is-2 light-text is-spaced">{{ .Title }}</h2>
+          {{- with .Description }}
+          <h3 class="subtitle is-5 light-text">{{ . }}</h3>
+          {{- end }}
+        </div>
+
+        <div class="content-wrapper">
+          <div class="columns is-multiline is-centered">
+
+            {{ range .Pages.GroupBy "Weight" "asc" }}
+            {{ range .Pages.ByTitle }}
+            <div class="column is-5">
+              <figure class="team">
+                <blockquote>
+                  {{ .Description }}
+                </blockquote>
+                <div class="author">
+                  <img src="{{ printf "images/team/%s.png" .File.TranslationBaseName | relURL }}" alt="">
+                  <h5>{{ .Title }}
+                  </h5>
+                  <span>{{ .Params.role }}</span>
+                  <div class="level socials">
+                    <a class="level-item" href="test">
+                      <div class="icon"><i class="fa fa-github"></i></div>
+                    </a>
+                    <a class="level-item" href="ok">
+                      <div class="icon"><i class="fa fa-twitter"></i></div>
+                    </a>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            {{- end }}
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </section>
 {{ end }}

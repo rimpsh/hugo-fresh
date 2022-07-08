@@ -1,6 +1,6 @@
 ---
 title: Jane Doe
-role: CEO, CTO Fixed-Line Communications & Founder
+role: Developer
 description: Please add a short summary description of your profile here!
 email: jane.doe@hugo-fresh.com
 sidebar: false
