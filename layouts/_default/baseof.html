@@ -6,6 +6,7 @@
     {{ partial "css.html" . }}
   </head>
   <body>
+    <div id="wrapper">
     <!-- Preloader -->
     <div id="preloader">
       <div id="status"></div>
@@ -17,6 +18,7 @@
     {{ block "main" . }}
     {{ end }}
 
+    </div>
     {{ if .Params.include_footer }}
     {{ partial "footer.html" . }}
     {{ end }}
