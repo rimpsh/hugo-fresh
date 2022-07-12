@@ -1,5 +1,6 @@
 ---
 title: First
+date: 2020-01-01
 description: This is a short description of a blog post
 sidebar: true
 imageURL: https://bulma.io/images/placeholders/1280x960.png

@@ -10,7 +10,7 @@
         </div>
         <div class="content-wrapper">
           <div class="columns is-multiline is-centered">
-              {{ range .Pages }}
+              {{ range .Pages.ByDate.Reverse }}
               <div class="column is-12">
                   <a href="{{ .Permalink }}">
                 <div class="card">
@@ -19,7 +19,7 @@
                       {{- with .Params.imageURL }}
                       <div class="media-left">
                         <figure class="image is-128x128">
-                          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            <img src="{{ . }}" alt="Placeholder image">
                         </figure>
                       </div>
                       {{- end }}
