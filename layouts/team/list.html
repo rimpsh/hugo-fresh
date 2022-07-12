@@ -41,4 +41,7 @@
         </div>
       </div>
     </section>
+    {{ if .Params.sidebar }}
+    {{ partial "list/sidebar.html" . }}
+    {{ end }}
 {{ end }}

@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ partial "single/content.html" . }}
 
-    {{ if .Site.Params.sidebar }}
+    {{ if .Params.sidebar }}
     {{ partial "single/sidebar.html" . }}
     {{ end }}
 {{ end }}
